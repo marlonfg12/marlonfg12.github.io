@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --font-family1: 'Krub', sans-serif;
+    --font-family2: 'Playfair Display', serif;
+    --primary: #004AAD;
+    --rojo: red;
+    --white: #fff;
+    --gray-light: #f8f8f8;
+    --black: #000;
+    --black-light: #333;
+    --green: #85c872;
+    --green-hover: #6aa05b;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--blanco);
+    font-family: var(--font-family1);
+    overflow-x: hidden ;
+}
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    font-family: var(--font-family2);
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+span {
+    color: var(--rojo);
+}
