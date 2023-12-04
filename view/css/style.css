@@ -14,6 +14,8 @@
     --black-light: #333;
     --green: #85c872;
     --green-hover: #6aa05b;
+    --gray: #E8E2D1;
+    --gray-blue: #D4E4F1;
 
 }
 
@@ -298,7 +300,8 @@ span {
     gap: 2rem;
 }
 
-.projects > h3{
+.projects > h3,
+.others > h3{
     color: var(--primary);
     opacity: 0.8;
     margin-top: 2rem;
@@ -374,5 +377,55 @@ span {
 @media(min-width: 768px){
     .project{
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* OTHERS PROJECTS */
+
+.others .others__content{
+    display: grid;
+    gap: 2rem;
+}
+
+.others .others__element{
+    background-color: var(--gray-blue);
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s ease-in-out;
+}
+
+.others .others__element p{
+    font-size: 1.8rem;
+    font-family: var(--font-family1);
+}
+
+.others .others__element .others__icons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.others .others__element a{
+    padding: 0.2rem;
+}
+
+.others .others__element:hover{
+    cursor: default;
+    background-color: var(--gray);
+    transition: .3s ease-in-out;
+}
+@media(min-width: 488px){
+    .others .others__content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 768px){
+    .others .others__content{
+        grid-template-columns: repeat(4, 1fr);
     }
 }
