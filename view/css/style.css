@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
 :root {
     --font-family1: 'Krub', sans-serif;
     --font-family2: 'Playfair Display', serif;
+    --font-family3: 'Ubuntu', sans-serif;
     --primary: #004AAD;
     --rojo: red;
     --white: #fff;
@@ -31,12 +33,12 @@ body {
     font-size: 1.6rem;
     line-height: 2;
     background-color: var(--white);
-    font-family: var(--font-family1);
+    font-family: var(--font-family3);
     overflow-x: hidden ;
 }
 
 .container {
-    width: min(90%, 120rem);
+    width: min(90%, 100rem);
     margin: 0 auto;
 }
 
@@ -49,7 +51,7 @@ h2,
 h3,
 h4 {
     line-height: 1.2;
-    font-family: var(--font-family2);
+    font-family: var(--font-family1);
 }
 
 h1 {
@@ -87,6 +89,24 @@ span {
     padding: 0;
 }
 
+.btn {
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+.btn-primary{
+    background-color: var(--primary);
+    transition: .5s ease;
+    color: var(--white);
+}
+
+.btn-primary:hover{
+    background-color: var(--black-light);
+    transition: .5s ease;
+}
+
+
 /* Header */
 
 .header{
@@ -100,7 +120,6 @@ span {
 
 .header .header__title h3{
     font-size: 4rem;
-    font-family: var(--font-family1);
     color: var(--primary);
     margin: 0;
     text-align: center;
@@ -197,5 +216,145 @@ span {
 
     .menu{
         display: flex;
+    }
+}
+
+
+/* About */
+
+.about {
+    display: grid;
+    align-items: center;
+    border-bottom: 0.3rem solid var(--gray-light);
+}
+
+.about .about__img {
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: .8rem solid var(--white);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 2rem 0;
+    justify-self: center;
+}
+
+.about .about__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: var(--gray-light);
+}
+
+.about .about__description{
+    padding: 1rem;
+}
+
+.about .about__description h1{
+    color: var(--primary);
+    font-size: 4.8rem;
+}
+
+.about .about__description > p{
+    font-size: 2.2rem;
+    color: var(--black-light);
+}
+
+.about .about__description a{
+    display: flex;
+    padding:1rem;
+    align-items: center;
+    gap: .8rem;
+    font-size: 1.8rem;
+}
+
+@media(min-width: 768px){
+    .about{
+        grid-template-columns: 1fr 2fr;
+    }
+    .about .about__description a{
+        display: inline-flex;
+        padding: 0.3rem 1rem;
+    }
+    
+}
+
+
+/* Projects */
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projects > h3{
+    color: var(--primary);
+    opacity: 0.8;
+    margin-top: 2rem;
+}
+
+.project {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+}
+
+.project .project__view{
+    background-color: var(--primary);
+    width: 100%;
+    border-radius: 1rem;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    transition: .3s ease-in-out;
+}
+
+.project .project__view:hover{
+    padding:1.5rem;
+    transition: .3s ease-in-out;
+}
+
+.project .project__view img{
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.project .project__description{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.project .project__description h4{
+    color: var(--primary);
+    font-size: 3rem;
+}
+
+.project .project__description > p{
+    color: var(--black-light);
+    opacity: 0.8;
+    font-size: 1.8rem;
+}
+
+.project .project__description a{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+@media(min-width: 768px){
+    .project{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
