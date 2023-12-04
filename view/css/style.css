@@ -301,7 +301,8 @@ span {
 }
 
 .projects > h3,
-.others > h3{
+.others > h3,
+.techs > h3{
     color: var(--primary);
     opacity: 0.8;
     margin-top: 2rem;
@@ -428,4 +429,17 @@ span {
     .others .others__content{
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+/* TECHS */
+
+.techs .techs__content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.techs .techs__content img{
+    margin: auto;
 }
